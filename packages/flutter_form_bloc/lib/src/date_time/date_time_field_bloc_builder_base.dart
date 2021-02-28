@@ -237,6 +237,7 @@ class _DateTimeFieldBlocBuilderBaseState<T>
   Future<TimeOfDay> _showTimePicker(BuildContext context) async {
     return await showTimePicker(
       context: context,
+      initialEntryMode: TimePickerEntryMode.input,
       useRootNavigator: widget.useRootNavigator,
       initialTime: widget.type == DateTimeFieldBlocBuilderBaseType.time
           ? widget.dateTimeFieldBloc.state.value ?? widget.initialTime
